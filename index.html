@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harsh Vardhan Singh — I build things that work</title>
+<meta name="description" content="Harsh Vardhan Singh — MCA student, developer and digital marketer based in Kota, India.">
+<style>
+:root{--bg:#0b0d12;--card:#141824;--line:#232a3b;--tx:#e8ebf3;--mut:#8b93a7;--ac:#4f7cff;--ac2:#9b6bff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f7fb;--card:#fff;--line:#dfe3ee;--tx:#141824;--mut:#5d667a;color-scheme:light}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:auto;padding:0 20px}
+section{padding:90px 0;position:relative}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:18px}.logo b{color:var(--ac)}
+nav ul{display:flex;gap:24px;list-style:none;padding:0}
+nav ul a{color:var(--mut);font-size:14px}nav ul a:hover{color:var(--tx)}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--line);transition:.2s;cursor:pointer;background:none;color:var(--tx)}
+.btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));border:0;color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.hero{min-height:88vh;display:flex;align-items:center;background:radial-gradient(600px 400px at 80% 20%,rgba(79,124,255,.18),transparent),radial-gradient(500px 400px at 10% 90%,rgba(155,107,255,.14),transparent)}
+.tag{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--mut);border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-bottom:22px}
+.tag i{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.2)}
+h1{font-size:clamp(40px,8vw,84px);line-height:1.05;letter-spacing:-2px}
+h1 span,h2 span{background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:560px;color:var(--mut);margin:22px 0 30px;font-size:18px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.mind{margin-top:44px;font:13px ui-monospace,Menlo,monospace;color:var(--mut)}.mind b{color:var(--ac)}
+.eye{font:13px ui-monospace,Menlo,monospace;color:var(--ac);letter-spacing:1px;margin-bottom:10px}
+h2{font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-1px;margin-bottom:14px}
+.sub{color:var(--mut);max-width:560px;margin-bottom:40px}
+.g2{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--ac);box-shadow:0 14px 34px rgba(79,124,255,.15)}
+.facts{display:grid;gap:14px}
+.facts small{color:var(--mut);display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+q{display:block;margin:22px 0;padding-left:16px;border-left:3px solid var(--ac);color:var(--mut);font-style:italic}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.stats .card{text-align:center;padding:18px}.stats b{display:block;font-size:30px;color:var(--ac)}.stats span{font-size:13px;color:var(--mut)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{font:inherit;font-size:14px;padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--mut);cursor:pointer}
+.filters button.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.pj .thumb{height:120px;border-radius:10px;margin-bottom:16px;display:grid;place-items:center;font-size:42px;background:linear-gradient(135deg,rgba(79,124,255,.25),rgba(155,107,255,.25))}
+.pj h3{font-size:20px;margin-bottom:6px}.pj p{color:var(--mut);font-size:15px}
+.tl{display:grid;gap:14px;margin-top:10px}
+.tl .card b{display:block}.tl .card small{color:var(--ac);font-family:ui-monospace,monospace}.tl .card p{color:var(--mut);font-size:15px;margin-top:4px}
+.sk{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.sk h3{font-size:15px;color:var(--ac);margin-bottom:6px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.links{display:grid;gap:12px;margin-top:20px}.links small{display:block;color:var(--mut);font-size:12px}
+form{display:grid;gap:12px}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac);border-color:transparent}
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--mut);font-size:14px;text-align:center}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.in{opacity:1;transform:none}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));z-index:20}
+.glow{position:fixed;width:440px;height:440px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(79,124,255,.16),transparent 65%);transform:translate(-50%,-50%);left:50%;top:40%}
+.hero{position:relative;overflow:hidden}
+section::before,.hero::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(80px);opacity:.22;background:var(--ac);top:8%;right:-110px;animation:fl 14s ease-in-out infinite alternate;pointer-events:none;z-index:-1}
+section:nth-of-type(even)::before{background:var(--ac2);left:-120px;right:auto}
+@keyframes fl{to{transform:translate(-70px,90px) scale(1.25)}}
+@keyframes up{from{opacity:0;transform:translateY(30px)}}
+.hero .w>*{animation:up .9s both}.hero .w>*:nth-child(2){animation-delay:.12s}.hero .w>*:nth-child(3){animation-delay:.24s}.hero .w>*:nth-child(4){animation-delay:.36s}.hero .w>*:nth-child(5){animation-delay:.48s}.hero .w>*:nth-child(6){animation-delay:.6s}
+.role{font-size:clamp(18px,3vw,26px);margin-top:14px;color:var(--mut)}.role span:first-of-type{color:var(--tx);font-weight:600}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--ac);margin-left:3px;vertical-align:-3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+h1 span,h2 span{background-size:200% 100%;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% 0}}
+.mq{overflow:hidden;white-space:nowrap;border-block:1px solid var(--line);padding:14px 0;background:color-mix(in srgb,var(--card) 60%,transparent)}
+.mq div{display:inline-block;animation:mq 28s linear infinite;color:var(--mut);font:14px ui-monospace,Menlo,monospace}
+@keyframes mq{to{transform:translateX(-50%)}}
+.thumb{animation:bob 4s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){*,::before{animation:none!important}}
+@media(max-width:760px){nav ul{display:none}.g2,.contact{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top"><canvas id="bg"></canvas><div class="prog" id="pg"></div><div class="glow" id="gl"></div>
+<nav><div class="w"><a class="logo" href="#top">Harsh<b>.</b></a>
+<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn p" href="https://www.linkedin.com/in/harsh-vardhan-singh79" target="_blank" rel="noopener">Let's Connect</a></div></nav>
+
+<header class="hero"><div class="w">
+<div class="tag"><i></i>Open to opportunities · Kota, India</div>
+<h1>Harsh Vardhan<br><span>Singh.</span></h1>
+<div class="role">I'm a <span id="ty"></span><span class="cur"></span></div>
+<p>MCA student who builds software, runs data-driven ad campaigns and designs brands. I turn ideas into real, usable products.</p>
+<div class="row"><a class="btn p" href="#projects">View My Work</a><a class="btn" href="mailto:harshvardhansingh3837@gmail.com">Email Me</a></div>
+<div class="mind">// mindset &nbsp; <b>Build · Learn · Improve · Repeat</b></div>
+</div></header>
+
+<div class="mq"><div>JAVA ✦ PYTHON ✦ SQL ✦ MYSQL ✦ GEN AI ✦ META ADS ✦ GRAPHIC DESIGN ✦ JAVA ✦ PYTHON ✦ SQL ✦ MYSQL ✦ GEN AI ✦ META ADS ✦ GRAPHIC DESIGN ✦ </div></div>
+<section id="about"><div class="w">
+<div class="eye rv">// 01. ABOUT ME</div>
+<h2 class="rv">More than <span>just a developer.</span></h2>
+<div class="g2">
+<div class="rv">
+<p style="color:var(--mut)">I'm Harsh, a Master of Computer Applications student with a background that mixes code, marketing and design. I've built a Java hotel management system, grown client revenue 8x through Meta Ads, and designed brands for freelance clients. I care about work that is useful, clear and measurable.</p>
+<q>Turning curiosity into meaningful technology.</q>
+<h3 style="font-size:16px">What I Enjoy</h3>
+<div class="chips"><span class="chip">Web Development</span><span class="chip">Generative AI</span><span class="chip">Databases</span><span class="chip">Digital Marketing</span><span class="chip">Graphic Design</span><span class="chip">Problem Solving</span></div>
+</div>
+<div class="facts rv">
+<div class="card"><small>Education</small><b>MCA</b> — Modi Institute of Management &amp; Technology<br><span style="color:var(--mut);font-size:14px">2025 – 2027 (Expected May 2027) · CGPA 7.04</span></div>
+<div class="card"><small>Previously</small><b>BCA</b> — Kota University<br><span style="color:var(--mut);font-size:14px">Final-year project: Hotel Management System</span></div>
+<div class="card"><small>Based in</small><b>Kota, Rajasthan, India</b></div>
+</div></div>
+<div class="stats rv"><div class="card"><b>8x</b><span>Ad revenue growth</span></div><div class="card"><b>7</b><span>Languages used</span></div><div class="card"><b>2+</b><span>Years freelancing</span></div><div class="card"><b>∞</b><span>Curiosity</span></div></div>
+</div></section>
+
+<section id="projects" style="background:linear-gradient(180deg,transparent,rgba(79,124,255,.05),transparent)"><div class="w">
+<div class="eye rv">// 02. PROJECTS</div>
+<h2 class="rv">Projects that <span>solve real problems.</span></h2>
+<p class="sub rv">A blend of creativity, technology and purpose.</p>
+<div class="filters" id="f"><button class="on" data-f="all">All</button><button data-f="java">Java</button><button data-f="data">Databases</button></div>
+<div class="grid">
+<article class="card pj rv" data-c="java data"><div class="thumb" style="overflow:hidden;padding:0"><svg viewBox="0 0 240 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel illustration"><circle cx="200" cy="24" r="10" fill="#e8ebf3" opacity=".85"/><rect x="70" y="26" width="100" height="82" rx="4" fill="#1b2236" stroke="#4f7cff" stroke-width="1.5"/><rect x="90" y="14" width="60" height="14" rx="3" fill="#4f7cff"/><text x="120" y="24.5" font-size="8" font-weight="700" fill="#fff" text-anchor="middle" font-family="system-ui,sans-serif">HOTEL</text><g fill="#ffd36b"><rect x="82" y="38" width="12" height="10"/><rect x="126" y="38" width="12" height="10"/><rect x="104" y="56" width="12" height="10"/><rect x="148" y="56" width="12" height="10"/><rect x="82" y="74" width="12" height="10"/><rect x="148" y="74" width="12" height="10"/></g><g fill="#2c3550"><rect x="104" y="38" width="12" height="10"/><rect x="148" y="38" width="12" height="10"/><rect x="82" y="56" width="12" height="10"/><rect x="126" y="56" width="12" height="10"/><rect x="104" y="74" width="12" height="10"/><rect x="126" y="74" width="12" height="10"/></g><rect x="111" y="90" width="18" height="18" rx="2" fill="#9b6bff"/><rect x="0" y="108" width="240" height="12" fill="#10131c"/></svg></div><div class="chips" style="margin:0 0 10px"><span class="chip">Java</span><span class="chip">JDBC</span><span class="chip">SQL</span></div><h3>Hotel Management System</h3><p>Object-oriented Java application with a SQL database (JDBC) handling CRUD for reservations, customer records and billing. BCA final-year project, Jan – May 2025.</p></article>
+</div></div></section>
+
+<section id="experience"><div class="w">
+<div class="eye rv">// 03. EXPERIENCE</div>
+<h2 class="rv">Where I've <span>put in the work.</span></h2>
+<div class="tl">
+<div class="card rv"><small>Jul 2024 – Dec 2024</small><b>Google Gen AI Exchange Ambassador</b><p>Joined AI workshops, explored LLM applications and promoted Gen AI adoption among peers.</p></div>
+<div class="card rv"><small>Jun 2023 – Jul 2024</small><b>Freelance Digital Advertising Specialist (Meta Ads)</b><p>Managed Meta Ads campaigns and generated 8x revenue through data-driven optimization.</p></div>
+<div class="card rv"><small>May 2022 – Dec 2023</small><b>Freelance Graphic Designer</b><p>Designed branding, social media creatives and promotional content tailored to client needs.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="w">
+<div class="eye rv">// 04. TOOLBOX</div>
+<h2 class="rv">Skills that <span>build possibilities.</span></h2>
+<p class="sub rv">Technologies and tools I use to turn ideas into reality.</p>
+<div class="sk">
+<div class="card rv"><h3>Programming</h3><div class="chips"><span class="chip">Java</span><span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">JavaScript</span><span class="chip">Visual Basic</span><span class="chip">SQL</span></div></div>
+<div class="card rv"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">DBMS</span></div></div>
+<div class="card rv"><h3>Tools &amp; Cloud</h3><div class="chips"><span class="chip">GitHub</span><span class="chip">Google Cloud Console</span><span class="chip">Microsoft Office</span></div></div>
+<div class="card rv"><h3>Computer Science</h3><div class="chips"><span class="chip">Data Structures</span><span class="chip">Operating Systems</span><span class="chip">Generative AI</span><span class="chip">Python for AI &amp; ML</span></div></div>
+<div class="card rv"><h3>Marketing &amp; Design</h3><div class="chips"><span class="chip">Meta Ads</span><span class="chip">Branding</span><span class="chip">Social Creatives</span></div></div>
+<div class="card rv"><h3>Certification</h3><div class="chips"><span class="chip">Future of Cyber Warfare: AI vs AI</span></div></div>
+</div></div></section>
+
+<section id="contact"><div class="w">
+<div class="eye rv">// 05. CONTACT</div>
+<h2 class="rv">Let's build <span>something amazing</span> together.</h2>
+<p class="sub rv">Have a project idea, a collaboration or a job opportunity? I'd love to hear from you.</p>
+<div class="contact">
+<div class="rv"><div class="links">
+<a class="card" href="mailto:harshvardhansingh3837@gmail.com"><small>Email</small>harshvardhansingh3837@gmail.com</a>
+<a class="card" href="https://www.linkedin.com/in/harsh-vardhan-singh79" target="_blank" rel="noopener"><small>LinkedIn</small>linkedin.com/in/harsh-vardhan-singh79</a>
+<a class="card" href="tel:+917568472254"><small>Phone</small>+91 75684 72254</a>
+<div class="card"><small>Location</small>Kota, Rajasthan, India</div></div></div>
+<form class="card rv" id="cf"><h3>I'm all ears!</h3>
+<input id="n" placeholder="Your name" required><input id="e" type="email" placeholder="Your email" required>
+<select id="s"><option>Project Collaboration</option><option>Job Opportunity</option><option>Freelance Work</option><option>General Question</option></select>
+<textarea id="m" rows="4" placeholder="Message" required></textarea>
+<button class="btn p" type="submit">Send Message</button></form>
+</div></div></section>
+
+<footer><div class="w">© 2026 Harsh Vardhan Singh · Made in India · Keep Building</div></footer>
+
+<script>
+document.getElementById('cf').addEventListener('submit',function(x){x.preventDefault();
+var b=encodeURIComponent('From: '+n.value+' ('+e.value+')\n\n'+m.value);
+location.href='mailto:harshvardhansingh3837@gmail.com?subject='+encodeURIComponent(s.value)+'&body='+b});
+document.querySelectorAll('#f button').forEach(function(b){b.onclick=function(){
+document.querySelectorAll('#f button').forEach(function(o){o.classList.remove('on')});b.classList.add('on');
+document.querySelectorAll('.pj').forEach(function(c){c.style.display=(b.dataset.f==='all'||c.dataset.c.indexOf(b.dataset.f)>-1)?'':'none'})}});
+var io=new IntersectionObserver(function(es){es.forEach(function(t){if(t.isIntersecting){t.target.classList.add('in');io.unobserve(t.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(r){io.observe(r)});
+var cv=document.getElementById('bg'),cx=cv.getContext('2d'),P=[],W,H,mx=-999,my=-999,gl=document.getElementById('gl'),pg=document.getElementById('pg'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=[];for(var i=0;i<Math.min(75,W/16);i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.45,vy:(Math.random()-.5)*.45})}
+function dr(){cx.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;cx.fillStyle='rgba(120,150,255,.7)';cx.beginPath();cx.arc(a.x,a.y,1.7,0,6.3);cx.fill();for(var j=i+1;j<P.length;j++){var b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<125){cx.strokeStyle='rgba(120,150,255,'+(.24*(1-d/125))+')';cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}var m=Math.hypot(a.x-mx,a.y-my);if(m<160){cx.strokeStyle='rgba(155,107,255,'+(.5*(1-m/160))+')';cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(mx,my);cx.stroke()}}if(!rm)requestAnimationFrame(dr)}
+rs();dr();addEventListener('resize',rs);
+addEventListener('mousemove',function(v){mx=v.clientX;my=v.clientY;gl.style.left=mx+'px';gl.style.top=my+'px'});
+addEventListener('scroll',function(){pg.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'});
+var T=['MCA Student','Java &amp; Python Developer','Meta Ads Specialist','Graphic Designer'].map(function(s){return s.replace('&amp;','&')}),ti=0,ci=0,dl=false,te=document.getElementById('ty');
+function ty(){var w=T[ti],d=dl?35:80;ci+=dl?-1:1;te.textContent=w.slice(0,ci);if(!dl&&ci===w.length){dl=true;d=1500}else if(dl&&ci===0){dl=false;ti=(ti+1)%T.length;d=300}if(rm){te.textContent=T[0];return}setTimeout(ty,d)}
+ty();
+</script>
+</body>
+</html>
